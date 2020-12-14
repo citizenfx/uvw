@@ -69,7 +69,7 @@ UVW_INLINE void Loop::close() {
 
 
 template<Loop::Mode mode>
-bool Loop::run() noexcept {
+bool Loop::run() {
     auto utm = static_cast<std::underlying_type_t<Mode>>(mode);
     auto uvrm = static_cast<uv_run_mode>(utm);
     return (uv_run(loop.get(), uvrm) == 0);

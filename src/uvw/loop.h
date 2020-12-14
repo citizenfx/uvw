@@ -196,7 +196,7 @@ public:
      * @return True when done, false in all other cases.
      */
     template<Mode mode = Mode::DEFAULT>
-    bool run() noexcept;
+    bool run();
 
     /**
      * @brief Checks if there are active resources.
